@@ -1,0 +1,8 @@
+@import url('./reset.css');
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1 fr 1 fr;
+
+  border: 2px solid red;
+}
