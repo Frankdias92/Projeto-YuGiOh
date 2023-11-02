@@ -58,11 +58,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
   border: 2px solid red;
   background-color: rgb(115, 115, 115);
-  width: 80px;
-  height: 120px;
+  width: 490px;
+  height: 488px;
 }
 
 
