@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- folha de estilo -->
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <title>Yugiog</title>
+
+</head>
+<body>
+  <div class="container">
+
+    <section class="fr1">
+      <div class="player">
+        <h1>Enemy Player</h1>
+      </div>
+        <article class="infoCards">
+          <div class="boxCard framed-golden">
+            <div id="card-info"></div>
+          </div>
+
+          <div class="boxLabel framed-golden-2">
+            <div id="battle-result"></div>
+          </div>
+        </article>
+      <div class="player">
+        <h1>Player Enemy</h1>
+      </div>
+    </section>
+
+    <section class="fr2">
+      <div class="enemyCards">
+      </div>
+      <main id="gridCards">
+      </main>
+      <div class="playerCards">
+      </div>
+    </section>
+
+
+    <section class="fr3">
+      <div class="card-versus">
+        <div class="card-infield">
+          <img id="field-card-player" src="" height="180px" width="125px">
+        </div>
+
+        <img height="100px" src="" alt="">
+
+        <div class="card-infield enemy">
+          <img id="field-card-enemy" src="" height="180px" width="125px">
+        </div>
+       </div>
+
+       <div class="menu-avatar">
+        <img src="" alt="" id="card-image">
+       </div>
+       <div class="card-details">
+        <p id="card-name"></p>
+        <p id="card-type"></p>
+
+        <button id="next-duel"></button>
+      </div>
+    </section>
+
+
+
+  </div>
+
+  <script src="./src/scripts/engine.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- 
+    AULAS by Felipe Aguiar
+
+Criando os states da engine:
+    https://www.youtube.com/embed/Rs1s8Yaotz8?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+Criando a enumeração de cartas:
+    https://www.youtube.com/embed/BxMAGagmlag?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Criando assinatura das funções principais:
+    https://www.youtube.com/embed/kPzm6v53twU?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+
+Implementando a lógica de setar cartas em campo:
+    https://www.youtube.com/embed/yO8HI4dJI3w?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Ajustando o caminho dos recursos:
+    https://www.youtube.com/embed/GLpREmMXRhM?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Implementando o mouseover:
+  https://www.youtube.com/embed/friFcJDS_dg?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+Implementando o setCardFields
+  https://www.youtube.com/embed/KBGSkWTO_VY?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Implementando o removeAllCardsImages:
+  https://www.youtube.com/embed/uIaNUj_jM_Y?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Implementando a lógica de duelos
+  https://www.youtube.com/embed/t-rokOCKGy8?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Implementando Efeitos sonoros
+  https://www.youtube.com/embed/nZKaWx7Rjtw?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Refatorando a tela de versus
+  https://www.youtube.com/embed/ZOrGLJLrVwg?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Aprendendo a Técnica de Extract to Method
+  https://www.youtube.com/embed/13ywG2UyCWQ?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Adicionando um FavIcon
+  https://www.youtube.com/embed/oU4Wru8OEiA?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+Adicionando cursores personalizados
+  https://www.youtube.com/embed/SzZQ5O5WZRY?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+Colocando uma música de fundo (BGM)
+  https://www.youtube.com/embed/_ihjqI_zxpY?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+Até o próximo Duelo
+  https://www.youtube.com/embed/ADo3FTTLSq4?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1
+
+
+
+ -->

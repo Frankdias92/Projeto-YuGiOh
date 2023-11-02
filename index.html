@@ -10,62 +10,66 @@
 
 </head>
 <body>
-  <div class="container">
-
-    <section class="fr1">
-      <div class="player">
-        <h1>Enemy Player</h1>
-      </div>
-        <article class="infoCards">
-          <div class="boxCard framed-golden">
-            <div id="card-info"></div>
-          </div>
-
-          <div class="boxLabel framed-golden-2">
-            <div id="battle-result"></div>
-          </div>
-        </article>
-      <div class="player">
-        <h1>Player Enemy</h1>
-      </div>
-    </section>
-
-    <section class="fr2">
-      <div class="playCards">
-        <div class="cardsEnemy">1</div>
-        <div class="cardsEnemy">2</div>
-        <div class="cardsEnemy">3</div>
-      </div>
-      <main id="gridCards">
-        <div class="cardsEnemy">1</div>
-        <div class="cardsPlayer">2</div>
-      </main>
-      <div class="playCards">
-        <div class="cardsEnemy">1</div>
-        <div class="cardsEnemy">2</div>
-        <div class="cardsEnemy">3</div>
-      </div>
-    </section>
-
-
-    <section class="fr3">
-       <div class="card-versus">
-        <div class="card-infield">
-          <img id="field-card-player" src="" height="180px" width="125px">
-        </div>
-
-        <img height="100px" src="" alt="">
-
-        <div class="card-infield enemy">
-          <img id="field-card-enemy" src="" height="180px" width="125px">
-        </div>
-       </div>
-    </section>
-
-
-
+  <audio id="bgm" loop>
+      <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+  </audio>
+  <div class="bg_video">
+      <video class="video" autoplay loop muted>
+          <source src="./src/assets/video/yugi.mp4" type="video/mp4">
+      </video>
   </div>
 
-  <script src="./src/scripts/engine.js"></script>
+  <div class="container">
+      <div class="container__left framed-golden-2">
+          <div class="score_box frame">
+              <span id="score_points">Win: 0 | Lose: 0</span>
+          </div>
+          <div class="menu_avatar">
+              <img id="card_image">
+          </div>
+          <div class="card_details frame">
+              <p id="card_name">Selecione</p>
+              <p id="card_type">uma Carta</p>
+          </div>
+      </div>
+
+      <div class="container__rigth">
+          <div class="card__container">
+              <div class="card_box framed" id="computer_cards">
+
+              </div>
+              <div class="card__versus__container">
+                  <div class="versus_top">
+
+                      <div class="card_infield">
+                          <img id="player_field_card"
+                              height="180px"
+                              width="125px">
+                      </div>
+
+                      <img height="100px" src="./src/assets/icons/millenium2.png" alt="Olho do Milenio">
+                      
+                      <div class="card_infield">
+                          <img id="computer_field_card"
+                              height="180px"
+                              width="125px">
+                      </div>
+                  </div>
+                  <div class="versus_buttom">
+                      <button id="next_duel" 
+                          class=" rpgui-button"
+                          onclick="resetDuel()"> Ganhou </button>
+                  </div>
+              </div>
+              <div class="card_box framed" id="player_cards">
+
+              </div>
+          </div>
+          
+      </div>
+  </div>
+
+
+  <script src="./src/scripts/engine.js" defer></script>
 </body>
 </html>
